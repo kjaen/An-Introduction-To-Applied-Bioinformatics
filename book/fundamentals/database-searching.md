@@ -419,9 +419,7 @@ Another metric of sequence composition is *kmer composition*. A [kmer](alias://C
 >>> skbio.DNA('ACCGTGACCAGTTACCAGTTTGACCAA').kmer_frequencies(k=5, overlap=True)
 ```
 
-In our next heuristic, we'll only align our query to the reference sequences with the largest fraction of the kmers that are observed in the query sequence are also present in the reference sequence. This makes a lot of sense to use as an alignment heuristic: we're only aligning sequences when it looks like they'll have multiple length-``k`` stretches of nucleotides that are not interrupted by substitutions or insertion/deletion mutations.
-
-In our next heuristic, we'll only align our query to the reference sequences with the largest fraction of the kmers that are observed in the query sequence. This makes a lot of sense to use as an alignment heuristic: we're only aligning sequences when it looks like they'll have multiple length-``k`` stretches of nucleotides that are not interrupted by substitutions or insertion/deletion mutations.
+In our next heuristic, we'll only align our query to the reference sequences with the largest fraction of the kmers that are observed in the query sequence and are also present in the reference sequence. This makes a lot of sense to use as an alignment heuristic: we're only aligning sequences when it looks like they'll have multiple length-``k`` stretches of nucleotides that are not interrupted by substitutions or insertion/deletion mutations.
 
 
 Here's the source code:
